@@ -8,20 +8,22 @@ import './Track.css'
 class Track extends Component {
 
   renderAction(){
-    if(isRemoval) {
 
-    }
   }
 
   render(){
     return (
-      <div className="Tracl">
+      <div className="Track">
         <div className="Track-information">
-          <h3>rack name here</h3>
-          <p>Track artist here | Track album here</p>
+          <h3>{this.props.track.name}</h3>
+          <p>{this.props.track.artist} | {this.props.track.album}</p>
         </div>
         <a className="Track-action"> + or - here</a>
       </div>
     )
   }
 }
+
+export default Track;
+
+

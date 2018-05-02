@@ -2,6 +2,8 @@ import React, {Component} from 'react';
 
 import './TackList.css';
 
+import Track from '../Track/Track';
+
 
 
 
@@ -9,7 +11,11 @@ class TrackList extends Component {
   render(){
     return(
       <div className="TrackList">
-        {/*Map method here*/}
+        {
+          this.props.tracks.map(track => {
+            return <Track key={track.id} track={track}/>
+          })
+        }
       </div>
     );
   }
